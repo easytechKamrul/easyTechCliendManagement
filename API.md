@@ -8,7 +8,7 @@ This document lists the backend endpoints exposed by the Easy Tech Solution appl
 
 ### Local
 ```text
-http://localhost:5000/api
+https://easytech-backend.onrender.com/api
 ```
 
 ### Production
