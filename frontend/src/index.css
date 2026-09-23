@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+
+body {
+  background: theme('colors.paper');
+  color: theme('colors.body');
+  font-family: 'Manrope', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* The dark palette carries the deep navy of the sidebar through the workspace. */
+[data-theme='dark'] body { background: #0E1B2A; color: #F4F8FB; }
+[data-theme='dark'] .bg-paper { background-color: #0B1926; }
+[data-theme='dark'] .bg-card { background-color: #1A3043; }
+[data-theme='dark'] .border-line { border-color: #3A566B; }
+[data-theme='dark'] .text-body { color: #F4F8FB; }
+[data-theme='dark'] .text-muted { color: #C0CFDA; }
+[data-theme='dark'] .bg-brandsoft { background-color: #164947; }
+[data-theme='dark'] .bg-goodsoft { background-color: #164833; }
+[data-theme='dark'] .bg-warnsoft { background-color: #594419; }
+[data-theme='dark'] .bg-badsoft { background-color: #552B2A; }
+[data-theme='dark'] .bg-pendingsoft { background-color: #59491A; }
+[data-theme='dark'] .bg-calmsoft { background-color: #1D3F68; }
+[data-theme='dark'] .text-brand { color: #76D8D2; }
+[data-theme='dark'] .text-good { color: #68DB9C; }
+[data-theme='dark'] .text-warn { color: #FFD27A; }
+[data-theme='dark'] .text-bad { color: #FFAAA3; }
+[data-theme='dark'] .text-pending { color: #FFDB75; }
+[data-theme='dark'] .text-calm { color: #A9C9FF; }
+[data-theme='dark'] .text-good\/80 { color: rgb(104 219 156 / .8); }
+[data-theme='dark'] .text-warn\/80 { color: rgb(255 210 122 / .8); }
+[data-theme='dark'] .text-bad\/80 { color: rgb(255 170 163 / .8); }
+[data-theme='dark'] .text-pending\/80 { color: rgb(255 219 117 / .8); }
+[data-theme='dark'] input, [data-theme='dark'] select, [data-theme='dark'] textarea { color: #F4F8FB; }
+[data-theme='dark'] input::placeholder, [data-theme='dark'] textarea::placeholder { color: #9FB2C1; }
+[data-theme='dark'] select option { background: #1A3043; color: #F4F8FB; }
+[data-theme='dark'] thead th { background: #1A3043; }
+
+.tnum { font-variant-numeric: tabular-nums; }
+
+.tablewrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.tablewrap::-webkit-scrollbar { height: 8px; }
+.tablewrap::-webkit-scrollbar-thumb { background: theme('colors.line'); border-radius: 99px; }
+
+thead th { position: sticky; top: 0; z-index: 2; background: theme('colors.card'); }
+
+@media print {
+  body * { visibility: hidden; }
+  #print-area, #print-area * { visibility: visible; }
+  #print-area { position: absolute; left: 0; top: 0; width: 100%; }
+}
